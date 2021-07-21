@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID 19 Tracking | Home</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="loader flex">
+        <img src="gif/loader.gif" alt="loading" id="loader">
+    </div>
+    <header class="header flex">
+        <div class="h-items-container flex">
+            <div class="h-logo-container flex">
+                <span class="app-name">COVID-19 Tracker</span>
+            </div>
+            <div class="h-links-container flex">
+                <a href="index.html"><p class="h-links">Home</p></a>
+                <a href="world-data.html"><p class="h-links">World Data</p></a>
+                <a href="country-data.html"><p class="h-links">Country Data</p></a>
+            </div>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </div>
+    </header>
+    <nav class="mobile-nav">
+        <a href="index.html"><p class="h-links">Home</p></a>
+        <a href="world-data.html"><p class="h-links">World Data</p></a>
+        <a href="country-data.html"><p class="h-links">Country Data</p></a>
+    </nav>
+    <div class="section-1 flex">
+        <div class="s1-info-container">
+            <h1 id="s1-info-text"></h1>
+            <div class="s-image-container flex">
+                <img src="images/world-infect.jpg" alt="World map image">
+            </div>
+        </div>
+    </div>
+    <div class="section-2 flex">
+        <div class="s-info-container">
+            <h3 id="s2-info-text"></h3>
+            <p>Using the mortality rate, many people are expected to die from COVID-19 in the coming weeks.</p>
+            <p>Some cases of COVID-19 are not reported, meaning, the actual mortality rate might be lower.</p>
+        </div>
+    </div>
+    <div class="section-3 flex">
+        <div class="s-info-container">
+            <h3 id="s3-info-text"></h3>
+            <p id="s3-1-info-text">That's 34% of all cases that are still in hospital right now.</p>
+        </div>
+    </div>
+    <div class="section-4 flex">
+        <div class="s4-info-container">
+            <h3 id="s4-info-text"></h3>
+            <div class="s-image-container flex">
+                <img src="images/world-pills.png" alt="World map image">
+            </div>
+            <p id="s4-1-info-text"></p>
+            <p id="s4-2-info-text"></p>
+        </div>
+    </div>
+    <div class="section-5 flex">
+        <div class="s-info-container">
+            <h3>Stay at home</h3>
+            <p>The best way to prevent the spread of the disease is to stay at home.</p>
+            <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" target="blank"><button>Read WHO Recommendations</button></a>
+        </div>
+    </div>
+    <footer class="footer flex">
+        <div class="f-container flex">
+            <p class="footer-text">Created by Bon Axl Feeser. For educational purposes only.</p>
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>

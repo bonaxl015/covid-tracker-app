@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID 19 Tracking | World Data</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
+    <link rel="stylesheet" href="css/world-data.css">
+</head>
+<body>
+    <div class="loader flex">
+        <img src="gif/loader.gif" alt="loading" id="loader">
+    </div>
+    <header class="header flex">
+        <div class="h-items-container flex">
+            <div class="h-logo-container flex">
+                <span class="app-name">COVID-19 Tracker</span>
+            </div>
+            <div class="h-links-container flex">
+                <a href="index.html"><p class="h-links">Home</p></a>
+                <a href="world-data.html"><p class="h-links">World Data</p></a>
+                <a href="country-data.html"><p class="h-links">Country Data</p></a>
+            </div>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </div>
+    </header>
+    <nav class="mobile-nav">
+        <a href="index.html"><p class="h-links">Home</p></a>
+        <a href="world-data.html"><p class="h-links">World Data</p></a>
+        <a href="country-data.html"><p class="h-links">Country Data</p></a>
+    </nav>
+    <div class="overall-data-container flex">
+        <div class="world-count-container flex">
+            <div class="total-container flex card">
+                <div class="image-container flex">
+                    <img class="labels" src="icons/total.png" alt="infected icon">
+                </div>
+                <div class="total-number-container flex"></div>
+            </div>
+            <div class="infected-container flex card">
+                <div class="image-container flex">
+                    <img class="labels" src="icons/infected.png" alt="infected icon">
+                </div>
+                <div class="infected-number-container flex"></div>
+            </div>
+            <div class="recovered-container flex card">
+                <div class="image-container flex">
+                    <img class="labels" src="icons/recovered.png" alt="infected icon">
+                </div>
+                <div class="recovered-number-container flex"></div>
+            </div>
+            <div class="death-container flex card">
+                <div class="image-container flex">
+                    <img class="labels" src="icons/death.png" alt="infected icon">
+                </div>
+                <div class="death-number-container flex"></div>
+            </div>
+        </div>
+        <div class="line-graph-container flex">
+            <canvas id="chart"></canvas>
+        </div>
+        <div class="countries-container card flex">
+            <div class="countries-header flex">List of Countries Affected</div>
+            <div class="countries-table flex">
+                <table class="table">
+                    <tr>
+                        <th>Country</th>
+                        <th>Cases</th>
+                        <th>Deaths</th>
+                        <th>Recovered</th>
+                        <th>Population</th>
+                    </tr>
+                    <tbody id="data"></tbody>
+                </table>
+            </div>
+            <div id="pages" class="flex"></div>
+            <div class="download flex">Download CSV</div>
+        </div>
+    </div>
+    <script src="js/world-data.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+:root{
+    --white: #FFF;
+    --red: #EB4647;
+    --green: #63C328;
+    --violet: #8B008B;
+    --black: #000;
+    --blue: #246EB9;
+    --gray: #333;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+}
+
+h1, h2, h3{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: var(--gray);
+    color: var(--white);
+    border-radius: 15px;
+    margin: 12px;
+    flex-direction: column;
+}
+
+.header{
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background-color: var(--gray);
+}
+
+.h-items-container{
+    width: 90%;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+
+.app-name{
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+.h-links{
+    color: var(--white);
+    font-size: 1.4rem;
+    margin: 0 14px;
+}
+
+.hamburger{
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar, .hamburger::after, .hamburger::before{
+    content: '';
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: var(--white);
+    margin: 6px 0;
+}
+
+.mobile-nav{
+    position: fixed;
+    top: 70px;
+    left: 100%;
+    width: 100%;
+    min-height: auto;
+    display: block;
+    z-index: 98;
+    background-color: var(--gray);
+    transition: 0.4s;
+}
+
+.mobile-nav.is-active{
+    left: 0;
+}
+
+.mobile-nav a{
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dashboard-container{
+    margin-top: 6rem;
+}
+
+.search-container{
+    width: 100%;
+    height: 70px;
+    justify-content: space-between;
+}
+
+#search{
+    width: 240px;
+}
+
+.canvass-container{
+    height: 500px;
+    width: 100%;
+}
+
+.country-display{
+    display: block;
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 500;
+}
+
+input,
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill{
+    border: none;
+    outline: none;
+    width: 280px;
+    font-size: 1rem;
+    color: var(--white);
+    padding: 6px 14px;
+    background-color: var(--gray);
+    border-bottom: 2px var(--white) solid;
+    box-shadow: 0 0 0 1000px var(--gray) inset;
+}
+
+input:-webkit-autofill:focus {
+    box-shadow: 0 0 0 1000px var(--gray) inset;
+    -webkit-text-fill-color: var(--white);
+}
+
+::placeholder{
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.all-country-data{
+    width: 100%;
+    flex-direction: column;
+}
+
+.dashboard-container{
+    height: auto;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.image-container{
+    padding-top: 10px;
+}
+
+.labels{
+    height: 100px;
+    width: 100px;
+}
+
+.infected-container,
+.recovered-container,
+.death-container,
+.vaccine-container{
+    width: 200px;
+    height: 200px;
+}
+
+.vaccine-number-container,
+.infected-number-container,
+.recovered-number-container,
+.death-number-container{
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0px 20px;
+}
+
+.total-day-change,
+.infected-day-change,
+.recovered-day-change,
+.death-day-change{
+    color: var(--red);
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.recovered-day-change{
+    color: var(--green);
+}
+
+.line-graph-container{
+    width: 70%;
+    height: 600px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: var(--gray);
+    flex-direction: column;
+    margin: 20px;
+}
+
+#chart{
+    width: 100%;
+    height: 80%;  
+}
+
+.loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--white);
+}
+
+.loader.hidden{
+    animation: fadeout 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout{
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+#loader{
+    width: 100px;
+    height: auto;
+}
+
+@media (min-width: 780px) and (max-width: 1120px){
+    .dashboard-container{
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 800px){
+    .hamburger{
+        display: none;
+    }
+
+    .mobile-nav{
+        display: none;
+    }
+}
+
+@media (max-width: 800px){
+    .h-links-container{
+        display: none;
+    }
+}
+
+@media (max-width: 750px){
+
+    .line-graph-container{
+        width: 100%;
+        height: 500px;
+        padding: 10px 15px;
+    }
+
+    .canvass-container{
+        height: 400px;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 450px){
+
+    #search{
+        width: 180px;
+    }
+
+    .country-display{
+        display: none;
+    }
+
+}

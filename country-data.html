@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID 19 Tracking | Country Data</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
+    <link rel="stylesheet" href="css/country-data.css">
+</head>
+<body>
+    <div class="loader flex">
+        <img src="gif/loader.gif" alt="loading" id="loader">
+    </div>
+    <header class="header flex">
+        <div class="h-items-container flex">
+            <div class="h-logo-container flex">
+                <span class="app-name">COVID-19 Tracker</span>
+            </div>
+            <div class="h-links-container flex">
+                <a href="index.html"><p class="h-links">Home</p></a>
+                <a href="world-data.html"><p class="h-links">World Data</p></a>
+                <a href="country-data.html"><p class="h-links">Country Data</p></a>
+            </div>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </div>
+    </header>
+    <nav class="mobile-nav">
+        <a href="index.html"><p class="h-links">Home</p></a>
+        <a href="world-data.html"><p class="h-links">World Data</p></a>
+        <a href="country-data.html"><p class="h-links">Country Data</p></a>
+    </nav>
+    <div class="all-country-data flex">      
+        <div class="dashboard-container flex">
+            <div class="infected-container flex card">
+                <div class="image-container flex">
+                    <img class="labels" src="icons/infected.png" alt="infected icon">
+                </div>
+                <div class="infected-number-container flex"></div>
+            </div>
+            <div class="recovered-container flex card">
+                <div class="image-container flex">
+                    <img class="labels" src="icons/recovered.png" alt="recovered icon">
+                </div>
+                <div class="recovered-number-container flex"></div>
+            </div>
+            <div class="death-container flex card">
+                <div class="image-container flex">
+                    <img class="labels" src="icons/death.png" alt="death icon">
+                </div>
+                <div class="death-number-container flex"></div>
+            </div>
+            <div class="vaccine-container flex card">
+                <div class="image-container flex">
+                    <img class="labels" src="icons/vaccine.png" alt="vaccine icon">
+                </div>
+                <div class="vaccine-number-container flex"></div>
+            </div>
+        </div>
+        <div class="line-graph-container flex">
+            <div class="search-container flex">
+                <div class="country-display flex"></div>
+                <input id="search" type="text" placeholder="Search country">
+            </div>
+            <div class="canvass-container flex">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="js/country-data.js"></script>
+</body>
+</html>
